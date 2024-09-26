@@ -11,7 +11,16 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'sm-md': '670px',
+        'sm-md-md': '750px',
+        'md-lg': '800px', // A custom size between sm and md
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 };
