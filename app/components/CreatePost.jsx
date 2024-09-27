@@ -33,7 +33,7 @@ const CreatePost = () => {
 
       <div className="flex flex-col gap-2 px-4 border-b border-slate-800">
         <div className="flex">
-          <div className="avatar h-8 w-8 rounded-full border self-center"></div>
+          <div className="avatar h-9 w-9 rounded-full border self-center"></div>
           <input
             className="input p-2 input-lg w-full bg-black focus:rounded-none text-white focus:outline-none focus:border-b focus:border-slate-800 border-0"
             placeholder="What's happening?!"
