@@ -7,7 +7,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { HiOutlineUser } from "react-icons/hi";
 const SideBar = () => {
   return (
-    <div className="h-screen w-[15%] md:w-[19%] sm-md:w-[12%] lg:w-[22%] flex flex-col pt-4 border-r border-slate-800">
+    <div className="h-screen w-[15%] md:w-[19%] sm-md:w-[12%] lg:w-[25%] flex flex-col pt-4 border-r border-slate-800">
       <div className="flex flex-col md:w-[80%] self-center">
         <div className="flex flex-col gap-7">
             <div className="self-center lg:self-start">
