@@ -1,9 +1,9 @@
 import ContainerComponent from "./ContainerComponent"
 
-const MessageContainer = () => {
+const MessageContainer = ({ selectedMessage }) => {
   return (
-    <div className='w-[55%] hidden lg:flex py-4'>
-        <ContainerComponent />
+    <div className={`${selectedMessage ? "w-full lg:w-[55%]" : "w-[55%]"}  hidden lg:flex py-4`}>
+        <ContainerComponent selectedMessage={selectedMessage}/>
     </div>
   )
 }

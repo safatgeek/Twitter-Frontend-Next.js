@@ -1,33 +1,8 @@
-"use client";
-
-import { useState } from "react";
 import { BsEnvelopePlus } from "react-icons/bs";
 
-const AllMessages = () => {
-  const [selectedMessageIndex, setSelectedMessageIndex] = useState(null);
-
-  const handleSelectMessage = (index) => {
-    setSelectedMessageIndex(index);
-  };
-
-  const messages = [
-    {
-      username: "Tanjim Alam",
-      handle: "@tanjim",
-      time: "2h",
-      message: "last message",
-    },
-    {
-      username: "John Doe",
-      handle: "@johndoe",
-      time: "5h",
-      message: "another message",
-    },
-    // Add more messages here if needed
-  ];
-
+const AllMessages = ({ onSelectMessage, selectedMessageIdx, messages, selectedMessage}) => {
   return (
-    <div className="w-full sm-md-md:w-[87%] md:w-[90%] lg:w-[45%] py-4 border-r border-slate-800">
+    <div className={`${selectedMessage ? "hidden md:block" : ""} w-full sm-md-md:w-[87%] md:w-[90%] lg:w-[45%] py-4 border-r border-slate-800`}>
       <div className="flex items-center justify-between px-4 mb-4">
         <span className="text-lg font-semibold">Messages</span>
         <div className="relative group">
@@ -60,17 +35,15 @@ const AllMessages = () => {
         </label>
       </div>
 
-      {messages.length != 0 && (
+      {messages.length > 0 && (
         <div>
           {messages.map((msg, index) => (
             <div
               key={index}
               className={`flex gap-2 items-center cursor-pointer p-4 hover:bg-[#121416] ${
-                selectedMessageIndex === index
-                  ? "bg-[#202327]"
-                  : "bg-transparent"
+                selectedMessageIdx === index ? "bg-[#202327]" : "bg-transparent"
               }`}
-              onClick={() => handleSelectMessage(index)}
+              onClick={() => onSelectMessage(index)}
             >
               <div className="avatar">
                 <div className="h-9 w-9 rounded-full border"></div>
@@ -79,9 +52,9 @@ const AllMessages = () => {
               <div className="flex flex-col w-full">
                 <div className="flex gap-1 h-5 items-start">
                   <span className="text-sm text-white font-semibold">
-                    {msg.username}
+                    {msg.fullName}
                   </span>
-                  <span className="text-sm text-slate-500">{msg.handle}</span>
+                  <span className="text-sm text-slate-500">{msg.username}</span>
                   <span className="text-sm text-slate-500">· {msg.time}</span>
                 </div>
 
