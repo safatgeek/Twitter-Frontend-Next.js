@@ -27,6 +27,10 @@ const MessagePage = () => {
     setSelectedMessageIndex(index);
   };
 
+  const hndleUnselectMessage = () => {
+    setSelectedMessageIndex(null)
+  }
+
   return (
     <div className="w-full flex border-r border-slate-800 overflow-x-hidden">
       <AllMessages onSelectMessage={handleSelectMessage} selectedMessageIdx={selectedMessageIndex} messages={messages}  selectedMessage={
@@ -35,6 +39,8 @@ const MessagePage = () => {
         selectedMessage={
           selectedMessageIndex !== null ? messages[selectedMessageIndex] : null
         }
+        UnselectChatHandler = {hndleUnselectMessage}
+
       />
     </div>
   );
