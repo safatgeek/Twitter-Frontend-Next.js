@@ -1,8 +1,9 @@
 import { BsEnvelopePlus } from "react-icons/bs";
 
-const AllMessages = ({ onSelectMessage, selectedMessageIdx, messages, selectedMessage}) => {
+const 
+AllMessages = ({ onSelectMessage, selectedMessageIdx, messages, selectedMessage }) => {
   return (
-    <div className={`${selectedMessage ? "hidden md:block" : ""} w-full sm-md-md:w-[87%] md:w-[90%] lg:w-[45%] py-4 border-r border-slate-800`}>
+    <div className={`${selectedMessage ? "hidden md:block" : "sm-md-md:w-[87%] md:w-[90%] lg:w-[45%]"} w-full h-screen py-4 border-r border-slate-800`}>
       <div className="flex items-center justify-between px-4 mb-4">
         <span className="text-lg font-semibold">Messages</span>
         <div className="relative group">

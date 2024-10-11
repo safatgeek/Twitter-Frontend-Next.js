@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa6";
 const profilePage = () => {
   return (
-    <div className="w-screen md:w-[59%] sm-md-md:w-[75%] sm-md:w-[80%] lg:w-[46%] relative border-r border-slate-800">
+    <div className="w-full sm-md-md:w-[85%] sm-md:w-full lg:w-[59%] relative border-r border-slate-800">
       <div className="flex gap-7 items-center ml-2 ">
         <FaArrowLeft className="px-2 h-8 w-8  hover:bg-stone-800 hover:rounded-full" />
         <div className="flex flex-col">

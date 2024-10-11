@@ -47,3 +47,6 @@ const MessagePage = () => {
 };
 
 export default MessagePage;
+
+
+//sm-md-md:w-[87%] md:w-[90%] lg:w-[45%]
